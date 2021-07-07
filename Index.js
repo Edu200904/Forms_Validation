@@ -3,6 +3,26 @@ function checkvalidation() {
     var name = document.getElementById ("nametext").value;
     var surname = document.getElementById ("surnametext").value;
 
+    if (email == "" && name == "" && surname == "") {
+        alert ("Campos obrigatórios! Preencha as credenciais EMAIL, NOME e SOBRENOME, por favor.");
+        return false;
+    }
+
+    if (email == "" && name == "") {
+        alert ("Campos obrigatórios! Preencha as credenciais EMAIL e NOME, por favor.");
+        return false;
+    }
+
+    if (email == "" && surname == "") {
+        alert ("Campos obrigatórios! Preencha as credenciais EMAIL e SOBRENOME, por favor.");
+        return false;
+    }
+
+    if (surname == "" && name == "") {
+        alert ("Campos obrigatórios! Preencha as credenciais NOME e SOBRENOME, por favor.");
+        return false;
+    }
+
     if (email == "") {
         alert ("Campo obrigatório! Preencha a credencial EMAIL, por favor.");
         return false;
@@ -17,4 +37,5 @@ function checkvalidation() {
         alert ("Campo obrigatório! Preencha a credencial SOBRENOME, por favor.");
         return false;
     }
+
 }
